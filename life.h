@@ -7,6 +7,7 @@ char*  world;
 
 void create_universe(int boardwidth, int boardheight);
 void next_gen(int gencount);
+void print_world();
 void next_action();
 
 #endif
