@@ -3,20 +3,37 @@
 #include "life.h"
 
 void create_universe(int boardwidth, int boardheight){
+    boardw = boardwidth;
+    boardh = boardheight;
 	world = malloc((boardwidth*boardheight)*sizeof(char));
+    srand(time(null));
+    
+    for (i = 0; i < (boardwidth*boardheight);i++){
+        world[i] = '-';
+        random = rand() % (boardwicth*boardheight);
+        world[random] = '*';
+    }
+    print_world();
 }
 
 void next_gen(int gencount){
-
+    print_world();
 }
 
 void print_world(){
-
+    for (i = 0; i < (boardw*boardh); i ++){
+        if (i % board = 0) {
+            printf(%c, world[i]);
+        } else {
+            printf(%c\n, world[i]);
+        }
+    }
+    next_action();
 }
 
 void next_action(){
 	char option[10];
-	printf("Next Move? Options:\n save,\n quit,\n continue one generation (continue),\n or continue "insert number" generations (more)?";
+	printf("Next Move? Options:\n save,\n quit,\n continue one generation (continue),\n or continue 'insert number' generations (more)?";
 	scanf(%s, &option);
 	switch(option){
 		case 'continue':
