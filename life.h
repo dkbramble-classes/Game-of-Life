@@ -3,7 +3,7 @@
 
 int boardw;
 int boardh;
-char*  world;
+char **world;
 
 void create_universe(int boardwidth, int boardheight);
 void next_gen(int gencount);
